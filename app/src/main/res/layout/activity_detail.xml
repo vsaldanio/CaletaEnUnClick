@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".DetailActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/topAppBar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@drawable/gradiente"
+      app:navigationIcon="@drawable/back"
+      app:title="@string/app_name"
+      app:titleCentered="true"
+      app:titleTextAppearance="?attr/textAppearanceHeadline6" />
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:id="@+id/carousel"
+        android:layout_width="match_parent"
+        android:layout_height="256dp" />
+
+      <TextView
+        android:id="@+id/place_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Title" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/place_address"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          tools:text="Address" />
+
+        <TextView
+          android:id="@+id/place_distance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="10dp"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          app:drawableLeftCompat="@drawable/pin_1"
+          tools:text="0,2km" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/location"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+        <Button
+          style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/como_llegar"
+          android:textColor="@color/black"
+          app:backgroundTint="@color/colorEnd"
+          app:elevation="8dp"
+          app:icon="@drawable/ic_arrow_left_bold_16"
+          app:iconTint="@color/black" />
+      </LinearLayout>
+
+      <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/description"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/place_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:text=""
+        android:textColor="@color/black"
+        tools:text="Lorem ipsum dolor sit amet. Ut repudiandae quia sed sunt asperiores et voluptas aspernatur in dolorem dolorem. Et veniam quibusdam et voluptas consequuntur ea necessitatibus Quis eos voluptas dolore est temporibus rerum? Et consequatur voluptas eos facilis vitae ut illo repudiandae.
+
+Sed earum esse aut voluptas consequatur et dolores nulla est similique voluptas et totam doloremque ut galisum itaque sed voluptatem nemo. Aut dignissimos ratione ad quae rerum et soluta galisum et culpa saepe aut inventore ullam. A aliquam odio ut autem quibusdam ad dolores provident.
+
+Aut corrupti deleniti cum nihil autem qui quas aperiam sed similique laboriosam sit voluptas quia. Ut quia aspernatur et nihil provident ut dolorem labore aut omnis provident est nihil ipsam ut iure reprehenderit! Ut omnis rerum a sequi inventore est illum sint. Quo dolorem quisquam ad suscipit dolores aut nisi velit cum earum incidunt est architecto quia non rerum fugit." />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

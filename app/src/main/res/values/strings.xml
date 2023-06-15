@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Turismo</string>
+  <string name="ordenar">Ordenar</string>
+  <string name="mapa">Mapa</string>
+  <string name="star_filled">star filled</string>
+  <string name="star_empty">star empty</string>
+  <string name="location">Ubicación</string>
+  <string name="como_llegar">Cómo llegar</string>
+  <string name="description">Descripción</string>
+</resources>

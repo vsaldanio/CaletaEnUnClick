@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/topAppBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@drawable/gradiente"
+      app:title="@string/app_name"
+      app:titleCentered="true"
+      app:titleTextAppearance="?attr/textAppearanceHeadline6" />
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    android:background="@drawable/sombra"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+    app:layout_constraintVertical_bias="0" />
+
+  <LinearLayout
+    android:id="@+id/button_container"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/topAppBar"
+    app:layout_constraintVertical_bias="0">
+
+    <Button
+      style="?android:attr/buttonBarButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:backgroundTint="@android:color/transparent"
+      android:text="@string/ordenar"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:textStyle="normal"
+      app:icon="@drawable/ordenar"
+      app:iconGravity="textStart"
+      app:iconPadding="2dp"
+      app:iconTint="@color/black" />
+
+    <Button
+      style="?android:attr/buttonBarButtonStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:backgroundTint="@android:color/transparent"
+      android:text="@string/mapa"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      android:textStyle="normal"
+      app:icon="@drawable/pin_2"
+      app:iconGravity="textStart"
+      app:iconPadding="2dp"
+      app:iconTint="@color/red" />
+
+  </LinearLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/button_container"
+    tools:itemCount="5"
+    tools:listitem="@layout/view_place_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
