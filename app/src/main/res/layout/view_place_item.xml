@@ -18,12 +18,13 @@
     android:layout_marginTop="16dp"
     android:orientation="horizontal">
 
-    <ImageView
-      android:id="@+id/place_image"
-      android:layout_width="125dp"
-      android:layout_height="125dp"
-      android:scaleType="centerCrop"
-      tools:srcCompat="@drawable/wp1" />
+    <com.google.android.material.imageview.ShapeableImageView
+         android:id="@+id/place_image"
+         android:layout_height="125dp"
+         android:layout_width="125dp"
+        android:scaleType="centerCrop"
+         android:src="@drawable/wp1"
+         app:shapeAppearanceOverlay="@style/Redondeado" />
 
     <LinearLayout
       android:layout_width="match_parent"

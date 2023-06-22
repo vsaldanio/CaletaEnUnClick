@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     binding.recycler.adapter = PlacesAdapter(
       listOf(
         Place(
-          "Vivienda de Ernesto Romberg",
-          R.drawable.wp1,
+          "La Llegada del Telégrafo",
+          R.drawable.telegrafo,
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           1.2,
           "address",
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
           -67.517572
         ),
         Place(
-          "Escuela N ° 14 “20 de Noviembre”",
+          "Vivienda de Ernesto Romberg”",
           R.drawable.wp2,
           "description",
           0.6,
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
           -58.381561
         ),
         Place(
-          "Vivienda de la familia Maimo",
+          "Almacén de Juan Álvarez",
           R.drawable.wp3,
           "description",
           2.3,
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
           -58.381561
         ),
         Place(
-          "title 4",
+          "Vivienda de la familia Maimo",
           R.drawable.wp1,
           "description",
           0.9,
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
           -58.381561
         ),
         Place(
-          "title 5",
+          "Escuela N°14 20 de Noviembre",
           R.drawable.wp2,
           "description",
           0.9,
@@ -59,22 +59,14 @@ class MainActivity : AppCompatActivity() {
           -58.381561
         ),
         Place(
-          "title 6",
+          "Surtidor de combustible de Máximo Berezowsky",
           R.drawable.wp3,
           "description",
           0.9, "address",
           -34.603731,
           -58.381561
         ),
-        Place(
-          "title 7",
-          R.drawable.wp1,
-          "description",
-          0.9,
-          "address",
-          -34.603731,
-          -58.381561
-        ),
+
       )
     ) {
       navigateTo(it)

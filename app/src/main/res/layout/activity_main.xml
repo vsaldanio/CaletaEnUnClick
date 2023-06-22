@@ -16,12 +16,18 @@
     app:layout_constraintVertical_bias="0">
 
     <com.google.android.material.appbar.MaterialToolbar
-      android:layout_width="match_parent"
-      android:layout_height="56dp"
-      android:background="@drawable/gradiente"
-      app:title="@string/app_name"
-      app:titleCentered="true"
-      app:titleTextAppearance="?attr/textAppearanceHeadline6" />
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/gradiente"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        app:navigationIcon="@drawable/back"
+        app:navigationIconTint="@color/colorStar"
+        app:logo="@mipmap/iconoapp"
+        app:subtitle="@string/app_subtitle"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TitleTextAppearance"
+        app:subtitleTextAppearance="@style/SubTitleTextAppearance"/>
   </com.google.android.material.appbar.AppBarLayout>
 
   <View
@@ -78,15 +84,17 @@
   </LinearLayout>
 
   <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recycler"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/button_container"
-    tools:itemCount="5"
-    tools:listitem="@layout/view_place_item" />
+      android:id="@+id/recycler"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button_container"
+      app:layout_constraintVertical_bias="1.0"
+      tools:itemCount="5"
+      tools:listitem="@layout/view_place_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

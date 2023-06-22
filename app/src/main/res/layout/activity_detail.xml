@@ -14,12 +14,16 @@
     <com.google.android.material.appbar.MaterialToolbar
       android:id="@+id/topAppBar"
       android:layout_width="match_parent"
-      android:layout_height="56dp"
+      android:layout_height="60dp"
       android:background="@drawable/gradiente"
+      android:paddingTop="3dp"
+      android:paddingBottom="3dp"
       app:navigationIcon="@drawable/back"
+      app:logo="@mipmap/iconoapp"
+      app:subtitle="@string/app_subtitle"
       app:title="@string/app_name"
-      app:titleCentered="true"
-      app:titleTextAppearance="?attr/textAppearanceHeadline6" />
+      app:titleTextAppearance="@style/TitleTextAppearance"
+      app:subtitleTextAppearance="@style/SubTitleTextAppearance" />
   </com.google.android.material.appbar.AppBarLayout>
 
   <androidx.core.widget.NestedScrollView
@@ -38,16 +42,17 @@
         android:layout_height="256dp" />
 
       <TextView
-        android:id="@+id/place_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text=""
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:text="Title" />
+          android:id="@+id/place_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="20dp"
+          android:fontFamily="@font/helveticaneuemedium"
+          android:text=""
+          android:textColor="@color/black"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          tools:text="Title" />
 
       <LinearLayout
         android:layout_width="match_parent"
@@ -86,13 +91,14 @@
         android:orientation="horizontal">
 
         <TextView
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:text="@string/location"
-          android:textColor="@color/black"
-          android:textSize="18sp"
-          android:textStyle="bold" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/helveticaneuemedium"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
           style="@style/Widget.Material3.Button.ElevatedButton.Icon"
