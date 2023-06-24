@@ -23,7 +23,7 @@
          android:layout_height="125dp"
          android:layout_width="125dp"
         android:scaleType="centerCrop"
-         android:src="@drawable/wp1"
+         android:src="@drawable/icono_barra"
          app:shapeAppearanceOverlay="@style/Redondeado" />
 
     <LinearLayout

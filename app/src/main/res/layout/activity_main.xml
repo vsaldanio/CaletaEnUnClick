@@ -23,7 +23,8 @@
         android:paddingBottom="3dp"
         app:navigationIcon="@drawable/back"
         app:navigationIconTint="@color/colorStar"
-        app:logo="@mipmap/iconoapp"
+        app:logo="@drawable/icono_barra"
+
         app:subtitle="@string/app_subtitle"
         app:title="@string/app_name"
         app:titleTextAppearance="@style/TitleTextAppearance"
@@ -61,7 +62,7 @@
       android:textColor="@color/black"
       android:textSize="16sp"
       android:textStyle="normal"
-      app:icon="@drawable/ordenar"
+      app:icon="@drawable/boton_ordenar"
       app:iconGravity="textStart"
       app:iconPadding="2dp"
       app:iconTint="@color/black" />
@@ -79,7 +80,8 @@
       app:icon="@drawable/pin_2"
       app:iconGravity="textStart"
       app:iconPadding="2dp"
-      app:iconTint="@color/red" />
+        app:iconTint="@color/red"
+        />
 
   </LinearLayout>
 

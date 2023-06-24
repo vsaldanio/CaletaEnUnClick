@@ -40,9 +40,15 @@ class DetailActivity : AppCompatActivity(), OnMapReadyCallback {
       binding.placeDistance.text = "${place.distance} km"
       binding.placeDescription.text = place.description
 
-      list.add(CarouselItem(imageDrawable = place.image))
-      list.add(CarouselItem(imageDrawable = R.drawable.wp2))
-      list.add(CarouselItem(imageDrawable = R.drawable.wp3))
+      list.add(CarouselItem(imageDrawable = R.drawable.bar_boliche_berezowsky))
+      list.add(CarouselItem(imageDrawable = R.drawable.almacenalvarez))
+      list.add(CarouselItem(imageDrawable = R.drawable.egresados_esc14))
+      list.add(CarouselItem(imageDrawable = R.drawable.casa_maimo))
+      list.add(CarouselItem(imageDrawable = R.drawable.desembarco_telegrafo))
+      list.add(CarouselItem(imageDrawable = R.drawable.casaromberg))
+      list.add(CarouselItem(imageDrawable = R.drawable.primer_surtidor))
+      list.add(CarouselItem(imageDrawable = R.drawable.primer_surtidor_cartel))
+      list.add(CarouselItem(imageDrawable = R.drawable.primer_casa_cartel))
 
       latitude = place.latitude
       longitude = place.longitude
