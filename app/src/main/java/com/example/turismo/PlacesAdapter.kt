@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.turismo.databinding.ViewPlaceItemBinding
 
 class PlacesAdapter(
-  private val places: List<Place>,
+  private val places: MutableList<Place>,
   private val placeClickListener: (Place) -> Unit
 ) :
   RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
@@ -27,8 +27,17 @@ class PlacesAdapter(
     holder.itemView.setOnClickListener { placeClickListener(place) }
   }
 
-  override fun getItemCount(): Int = places.size
+    override fun getItemCount(): Int = places.size
 
+  fun sortByIndex() {
+    places.sortBy { it.index }
+    notifyDataSetChanged()
+  }
+
+  fun sortByDistance() {
+    places.sortBy { it.distance }
+    notifyDataSetChanged()
+  }
   class ViewHolder(private val binding: ViewPlaceItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(place: Place) {
